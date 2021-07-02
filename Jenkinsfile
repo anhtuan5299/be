@@ -13,7 +13,7 @@ pipeline {
             returnStdout: true
         )
 
-        ARTIFACT_REPOSITORY = "10.88.231.22:9095"
+        ARTIFACT_REPOSITORY = "anhtuan5299/be:v2.0"
         CREDENTIAL_ID = "dockerhub"
         registryCredential="dockerhub"
 
