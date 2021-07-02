@@ -40,7 +40,7 @@ pipeline {
         stage ("Push docker image fe-angular to hub") {
             steps{
                script {
-                   def appimage = docker.build registry + ":${BUILD_IMAGE}"
+                   def appimage = docker.build ARTIFACT_REPOSITORY
                    docker.withRegistry( '', registryCredential ) {
                        appimage.push()
                        appimage.push(' latest ')
